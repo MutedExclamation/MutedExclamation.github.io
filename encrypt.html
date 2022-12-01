@@ -35,6 +35,19 @@
         </div>
     </nav>
 
+    <div class="toast-container position-fixed top-50 start-50 translate-middle p-3">
+        <div id="liveToast" class="toast" data-bs-delay="60000" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <span>🦊</span>
+                <strong class="me-auto">Suckes!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Wiadomość została skopiowana! Wklej ją teraz na czat rodzinny.
+            </div>
+        </div>
+    </div>
+
     <div class="container my-5">
         <h1>Zapisz swoją listę!</h1>
         <div class="col-lg-8 px-0">
@@ -43,7 +56,7 @@
                 <li>W&nbsp;polu <em>Hasło</em> wpisz dowolne, wymyślone przez siebie hasło.</li>
                 <li>W polu <em>Lista życzeń</em> wypisz swoje wymarzone prezenty. 🎁</li>
                 <li>Kliknij przycisk <em>Zapisz</em>.</li>
-                <li>W polu <em>Wynik zapisu</em> pojawi się Twoja zaszyfrowana lista. Zostanie automatycznie skopiowana. Możesz udostępnić ją na czacie rodzinnym. Bez hasła nikt jej nie odczyta. 🔒</li>
+                <li>Wiadomość zostanie automatycznie skopiowana. Udostępnij ją na czacie rodzinnym. Bez hasła nikt jej nie odczyta. 🔒</li>
                 <li><em>Hasło</em> wyślij mnie, czyli Łukaszowi. 🦊</li>
                 <li>Dla pewności, po zapisie spróbuj sam(a) odczytać swoją listę na stronie <em><a href="/decrypt.html">Odczytaj</a></em>.</li>
             </ol>
@@ -58,8 +71,6 @@
                         style="height: 30vh"></textarea>
                 </div>
             </div>
-            <label>Wynik zapisu:</label>
-            <p class="text-wrap" id="encrypt-result"></p>
             <button class="w-100 btn btn-primary btn-lg" type="submit" onclick="encrypt()">Zapisz</button>
         </div>
     </div>

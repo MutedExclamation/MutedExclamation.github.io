@@ -3,9 +3,11 @@ function encrypt() {
     const password = document.getElementById('password');
     const encrypted = CryptoJS.AES.encrypt(encryptList.value, password.value)
 
-    const encryptResult = document.getElementById('encrypt-result');
-    encryptResult.innerText = encrypted;
     navigator.clipboard.writeText(encrypted);
+    const liveToast = document.getElementById('liveToast');
+    const toast = new bootstrap.Toast(liveToast);
+    toast.show();
+
     if (window.isSecureContext
         && typeof navigator !== "undefined"
         && 'canShare' in navigator
